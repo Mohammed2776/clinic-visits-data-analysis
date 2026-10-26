@@ -1,0 +1,11 @@
+MediCare Mini-Project 2 — Two-minute pitch
+
+The administrator asked where patients wait longest, which departments earn what, whether the clinic is getting busier, and what to change in 2026. I analysed the 2025 outpatient export: 2,423 raw rows across 13 columns. After removing 23 exact duplicates and rejecting three impossible-age records, the clean analysis has 2,397 visits.
+
+The first finding is workload. General Medicine handled 790 visits, the highest of any department, and Monday had 495 visits, the busiest weekday. That suggests we should review Monday coverage and arrival patterns rather than assume the same staffing level works every day.
+
+The second finding is waiting time. General Medicine also has the highest 90th-percentile wait at 49 minutes. I recommend a targeted queue review there and weekly monitoring of median and 90th-percentile waits, alongside visits per staffed hour.
+
+Third, revenue needs careful interpretation. Cardiology's mean fee is ₹2,021, while its median is ₹1,260. Thirteen values at ₹50,000 were flagged by the IQR rule, but I retained them because the repeated amount in Cardiology and Orthopedics may represent procedures. The top ten percent of visits account for 37.4% of recorded revenue, so billing codes matter a lot to the revenue story.
+
+For 2026, I would pilot queue improvements in General Medicine, verify the ₹50,000 charges against billing codes, and track waits and revenue separately. With timestamps, shift rosters and verified procedure data, we can tell whether the issue is capacity, case mix or one-off charges. This project is descriptive; prediction of consultation time from age, department and doctor comes next.
